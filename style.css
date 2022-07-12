@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+*{
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'GothamOffice-Bold.otf';
+    src: url(GothamOffice/GothamOffice-Bold.otf);
+}
+
+:root{
+    --cor1: #E1E2E5;
+    --cor2: #272424;
+    --cor3: #141414;
+    --cor4: #949699;
+    --cor5: #eb6cab;
+    --cor6: #F15A54;
+    --cor7: #0A172D;
+    --cor8: #621882;
+    --cor9: #0BC4CF;
+
+
+    --font1: 'GothamOffice-Bold.otf'; /*BOLD*/
+}
+body{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor7));
+    background-position:  center center;
+    background-size: cover;
+    color: var(--cor1);
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: var(--font1);
+    font-size: 2.3em;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.container-input{
+    width: 340px;
+    padding-bottom: 30px;
+}
+.container-input span{
+    font-size: 1.5em;
+}
+#valor{
+    font-size: 1em;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    background: var(--cor1);
+    border-radius: 6px;
+    height: 17px;
+    margin-top: 25px;
+}
+.button-cta{
+    height: 45px;
+    background: var(--cor9);
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 35px;
+    border: none;
+    font-size: 20px;
+    color: var(--cor3);
+    font-weight: bold;
+}
+.button-cta:hover{
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container-password{
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.title{
+    text-align: center;
+    font-size: 23px;
+    margin: 10px 0px 8px 0px;
+}
+.password{
+    background-color: var(--cor3);
+    color: #00FC63;
+    height: 60px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+.password:hover{
+    transform: scale(1.05)
+}
+.tooltip{
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.hide{
+    display: none;
+}
+
+.container-password:hover .tooltip{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
